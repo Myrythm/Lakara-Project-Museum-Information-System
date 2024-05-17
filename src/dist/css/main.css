@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.wrapper{
+    width: 420px;
+    background: #35312ee6;
+    color: #eec19f;
+    padding: 30px 40px;
+}
+.wrapper h1{
+    font-size: 36px;
+}
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder {
+    color: black;
+}
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 5px;
+}
+.remember-forgot h5{
+    color: #eec19f;
+    font-size: 13px;
+    font-weight: normal;
+}
+.remember-forgot .signup-link {
+    color: #eec19f;
+    text-decoration: none;
+}
+.wrapper button{
+    width: 100%;
+    height: 45px;
+    background: #23201b;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: #eec19f;
+    font-size: 16px;
+}
+.line {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.line::before,
+.line::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: #eec19f;
+}
+.line .text-wrapper {
+    padding: 0 10px;
+    color: #eec19f;
+}
+.overlap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    border: 1px solid;
+    border-color: #eec19f;
+    margin: 9px 0 5px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.overlap .icon{
+    font-size: 20px;
+}
+.overlap .text-wrapper-2{
+    color: #eec19f;
+}
+.overlap:hover{
+    background: #eec19f;
+    color: #35312e;
+}
+.overlap:hover .text-wrapper-2{
+    color: #35312e;
+} 
+.wrapper-1{
+    width: 420px;
+    background: #35312ee6;
+    color: #eec19f;
+    padding: 30px 40px;
+}
+.wrapper-1 .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+.wrapper-1 button{
+    width: 100%;
+    height: 45px;
+    background: #23201b;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: #eec19f;
+}
+.wrapper-1 h5{
+    font-size: 13px;
+    font-weight: normal;
+}
+.bergabung-link{
+    font-size: 13px;
+    text-align: center;
+    margin: 9px 0 5px;
+}
+.bergabung-link a{
+    color: #eec19f;
+    font-weight: bold;
+    text-decoration: none;
+}
+button a{
+    color: #eec19f;
+    text-decoration: none;
+    font-size: 16px;
+}
