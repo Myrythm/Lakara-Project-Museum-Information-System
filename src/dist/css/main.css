@@ -30,7 +30,6 @@ body {
     height: 50px;
     margin: 20px 0;
     background-color: white;
-    border-radius: 10px;
     padding: 5px 15px;
 }
 .input-box input {
@@ -62,7 +61,6 @@ body {
     background: #23201b;
     border: none;
     outline: none;
-    border-radius: 40px;
     color: #eec19f;
     font-size: 16px;
 }
@@ -91,7 +89,6 @@ body {
     border: 1px solid;
     border-color: #eec19f;
     margin: 9px 0 5px;
-    border-radius: 40px;
     cursor: pointer;
 }
 .overlap .icon {
@@ -124,7 +121,6 @@ button a {
     height: 50px;
     margin: 20px 0;
     background-color: white;
-    border-radius: 10px;
     padding: 5px 15px;
 }
 .wrapper-1 button{
@@ -133,7 +129,6 @@ button a {
     background: #23201b;
     border: none;
     outline: none;
-    border-radius: 40px;
     color: #eec19f;
 }
 .wrapper-1 h5{
@@ -151,7 +146,7 @@ button a {
     text-decoration: none;
 }
 .nav{
-    background-color: #35312e;
+    background-color: #23201b;
 }
 .navbar{
     padding: 10px 0 10px 0;
@@ -215,4 +210,98 @@ footer h5{
     --mainLightGrey: rgba(172, 172, 172);
     --mainWhite: #fff;
     --mainBlue: #007bff;
+}
+.homepage{
+    background-color: #35312e;
+}
+.homepage .header-box h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #eec19f;
+    border-bottom: 2px solid #eec19f;
+    display: inline-block;
+}
+.homepage .header-box p{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(240, 230, 211);
+}
+.homepage .header-box img{
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    margin-top: 40px;
+}
+.homepage .header-box button {
+    background-color: #6c645e;
+    border-color: #eec19f;
+    color: rgb(240, 230, 211);
+    padding: 8px 16px;
+    font-size: 16px;
+    height: auto;
+}
+.homepage .header-box button:hover {
+    background-color: #35312e;
+    border-color: #eec19f;
+}
+.peta{
+    background: url('../img/bg.png');
+}
+.peta img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    margin-top: 20px;
+}
+.kontak h1{
+    text-align: center;
+    padding: 30px 0;
+    color: #eec19f;
+    font-size: 40px;
+    font-weight: 600;  
+    margin-bottom: 20px;
+}
+.kontak button {
+    background-color: #6c645e;
+    border-color: #eec19f;
+    color: rgb(240, 230, 211);
+    padding: 8px 16px;
+    font-size: 16px;
+    height: auto;
+    margin-left: 259px;
+    margin-bottom: 30px;
+}
+.kontak button:hover {
+    background-color: #35312e;
+    border-color: #eec19f;
+}
+.kontak form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.mb-3{
+    color: #eec19f;
+}
+.museum{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    margin-top: 10px;
+}
+.museum h1{
+    color: #eec19f;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.museum img{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px; 
+    max-height: 500px;
+    margin-bottom: 120px;
 }
