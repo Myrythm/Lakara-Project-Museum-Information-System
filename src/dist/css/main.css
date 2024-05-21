@@ -1,24 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
+    min-height: 100vh;
+    background: none;
+}
+.login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../img/bg.png');
+    background: url('../img/bg.png') no-repeat center center;
     background-size: cover;
-    background-position: center;
 }
-.wrapper{
+.wrapper {
     width: 420px;
     background: #35312ee6;
     color: #eec19f;
     padding: 30px 40px;
 }
-.wrapper h1{
+.wrapper h1 {
     font-size: 36px;
 }
 .wrapper .input-box {
@@ -43,22 +46,17 @@ body {
 .input-box input::placeholder {
     color: black;
 }
-.wrapper .remember-forgot{
+.remember-forgot {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 5px;
 }
-.remember-forgot h5{
-    color: #eec19f;
-    font-size: 13px;
-    font-weight: normal;
-}
 .remember-forgot .signup-link {
     color: #eec19f;
     text-decoration: none;
 }
-.wrapper button{
+.wrapper button {
     width: 100%;
     height: 45px;
     background: #23201b;
@@ -84,7 +82,7 @@ body {
     padding: 0 10px;
     color: #eec19f;
 }
-.overlap{
+.overlap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,19 +94,24 @@ body {
     border-radius: 40px;
     cursor: pointer;
 }
-.overlap .icon{
+.overlap .icon {
     font-size: 20px;
 }
-.overlap .text-wrapper-2{
+.overlap .text-wrapper-2 {
     color: #eec19f;
 }
-.overlap:hover{
+.overlap:hover {
     background: #eec19f;
     color: #35312e;
 }
-.overlap:hover .text-wrapper-2{
+.overlap:hover .text-wrapper-2 {
     color: #35312e;
-} 
+}
+button a {
+    color: #eec19f;
+    text-decoration: none;
+    font-size: 16px;
+}
 .wrapper-1{
     width: 420px;
     background: #35312ee6;
@@ -147,8 +150,69 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
-button a{
+.nav{
+    background-color: #35312e;
+}
+.navbar{
+    padding: 10px 0 10px 0;
+}
+.navbar button {
+    width: 35%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #000;
+    border: 1px solid #fff;
+}
+.navbar button a{
+    color: white;
+}
+.gambar{
+    padding: 27px;
+    background-color: #35312e;
+}
+.gambar h3{
     color: #eec19f;
-    text-decoration: none;
-    font-size: 16px;
+}
+.position-relative {
+    position: relative;
+}
+.image-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eec19f;
+    text-align: center;
+    padding: 10px 0;
+}
+.overlap-2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.icon-2{
+    font-size: 24px;
+    color: #eec19f;
+}
+.image-container {
+    position: relative;
+}
+.container h2{
+    color: rgb(224, 214, 193);
+    font-size: 15px;
+    margin-top: 20px;
+}
+footer {
+    font-size: 14px;
+}
+footer h5{
+    font-size: 14px;
+}
+:root{
+    --mainDark: #23201b;
+    --mainGrey: rgba(109, 109, 109);
+    --mainLightGrey: rgba(172, 172, 172);
+    --mainWhite: #fff;
+    --mainBlue: #007bff;
 }

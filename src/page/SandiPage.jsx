@@ -1,6 +1,7 @@
 const SandiPage = () => {
   return (
-    <div className="wrapper-1">
+    <div className="login-page">
+      <div className="wrapper-1">
             <form action="">
                 <h1>Lupa Kata Sandi ?</h1>
                 <h5>Masukan alamat email anda untuk mengatur ulang kata sandi!</h5>
@@ -10,6 +11,7 @@ const SandiPage = () => {
                 <button type="submit"><a href="/login">Atur ulang kata sandi</a></button>
             </form>
         </div>
+    </div>
   )
 }
 
