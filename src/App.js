@@ -8,6 +8,9 @@ import LoginPage from './page/LoginPage';
 import DaftarPage from './page/DaftarPage';
 import SandiPage from './page/SandiPage';
 import BerandaPage from './page/BerandaPage';
+import UlasanPage from './page/UlasanPage';
+
+
 
 function App() {
   const location = useLocation();
@@ -23,6 +26,7 @@ function App() {
         <Route path='/daftar' Component={DaftarPage} />
         <Route path='/sandi' Component={SandiPage} />
         <Route path='/beranda' Component={BerandaPage} />
+        <Route path='/ulasan' Component={UlasanPage} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

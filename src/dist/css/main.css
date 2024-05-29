@@ -180,6 +180,9 @@ button a {
     text-align: center;
     padding: 10px 0;
 }
+.image-text a {
+    color: #eec19f; 
+}
 .overlap-2{
     display: flex;
     align-items: center;
@@ -305,3 +308,73 @@ footer h5{
     max-height: 500px;
     margin-bottom: 120px;
 }
+
+/* .ulasan */
+.banner {
+    margin-top: 0;
+    padding: 260px 0 100px 0;
+    background-color: #35312E;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .banner .tagline {
+    font-weight: 0;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  
+  .banner h1 {
+    font-size: 40px;
+    color: #EEC19F;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .banner p {
+    color: #F1E9D2;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    width: 96%;
+  }
+  
+  .overlap-2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .icon-2{
+    font-size: 80px;
+    color: #eec19f;
+  }
+  
+  .gambar {
+    border-image: auto;
+  }
+  
+  
+  @keyframes updown {
+      0% {
+          transform: translateY(-20px);
+      }
+      50% {
+          transform: translateY(20px);
+      }
+      100% {
+          transform: translateY(-20px);
+      }
+  }
+  
+  
