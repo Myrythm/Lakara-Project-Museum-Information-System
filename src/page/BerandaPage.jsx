@@ -33,7 +33,9 @@ const BerandaPage = () => {
                     <Col>
                         <div className="image-container">
                             <img src={gambar1} alt="unsplash.com" className="w-100"/>
-                            <div className="image-text">Museum Nasional Republik Indonesia (Gajah), Jakarta Pusat</div>
+                            <div className="image-text">
+                                <a href="/ulasan">Museum Nasional Republik Indonesia (Gajah), Jakarta Pusat</a>
+                                </div>
                         </div>
                     </Col>
                     <Col>
