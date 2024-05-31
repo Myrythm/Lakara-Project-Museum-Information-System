@@ -8,11 +8,12 @@ import LoginPage from './page/LoginPage';
 import DaftarPage from './page/DaftarPage';
 import SandiPage from './page/SandiPage';
 import BerandaPage from './page/BerandaPage';
+import LoginadminPage from './page/LoginadminPage';
 
 function App() {
   const location = useLocation();
 
-  const hideNavbarAndFooter = ['/login', '/daftar', '/sandi'].includes(location.pathname);
+  const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin'].includes(location.pathname);
 
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
         <Route path='/daftar' Component={DaftarPage} />
         <Route path='/sandi' Component={SandiPage} />
         <Route path='/beranda' Component={BerandaPage} />
+        <Route path='/loginadmin' Component={LoginadminPage} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

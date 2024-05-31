@@ -305,3 +305,73 @@ footer h5{
     max-height: 500px;
     margin-bottom: 120px;
 }
+
+/* login admin */
+.login-page-admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    background-size: cover;
+}
+.wrapper-admin{
+    width: 420px;
+    background: #ffffff;
+    color: #eec19f;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+.gambar-admin{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.gambarlogin{
+    max-width: 100%;
+}
+.wrapper-admin h1{
+    font-size: 36px;
+}
+.wrapper-admin .input-box{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #000;
+}
+.input-box input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    outline: none;
+    border-color: #dfeaf2;
+    font-size: 14px;
+    color: black;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+.input-box input::placeholder {
+    color: black;
+}
+.wrapper-admin button {
+    width: 35%;
+    height: 30px;
+    background: #3c50e0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block; 
+    margin-top: 80px;
+    margin-bottom: 25px;
+}
+.wrapper-admin button a{
+    color: #ffffff;
+}
