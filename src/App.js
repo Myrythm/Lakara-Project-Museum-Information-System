@@ -10,15 +10,22 @@ import SandiPage from './page/SandiPage';
 import BerandaPage from './page/BerandaPage';
 import LoginadminPage from './page/LoginadminPage';
 import UlasanPage from './page/UlasanPage';
+import ProfilePage from './page/ProfilePage';
+import NavBerandaComp from './components/NavBerandaComp';
+import NavUlasanComp from './components/NavUlasanComp';
+
 
 function App() {
   const location = useLocation();
 
-  const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin'].includes(location.pathname);
+  const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/profile'].includes(location.pathname);
+  const showNavBerandaComp = location.pathname === '/beranda';
+  const showNavUlasanComp = location.pathname === '/ulasan';
+
 
   return (
     <div>
-      {!hideNavbarAndFooter && <NavbarComp />}
+      {showNavBerandaComp ? <NavBerandaComp /> : showNavUlasanComp ? <NavUlasanComp /> : !hideNavbarAndFooter && <NavbarComp />}
       <Routes>
         <Route path='/' Component={HomePage} />
         <Route path='/login' Component={LoginPage} />
@@ -27,6 +34,7 @@ function App() {
         <Route path='/beranda' Component={BerandaPage} />
         <Route path='/loginadmin' Component={LoginadminPage} />
         <Route path='/ulasan' Component={UlasanPage} />
+        <Route path='/profile' Component={ProfilePage} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

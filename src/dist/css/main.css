@@ -335,19 +335,19 @@ footer h5{
 .wrapper-admin h1{
     font-size: 36px;
 }
-.wrapper-admin .input-box{
+.wrapper-admin .input-box-admin{
     position: relative;
     width: 100%;
     margin: 20px 0;
 }
 
-.input-box label {
+.input-box-admin label {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
     color: #000;
 }
-.input-box input {
+.input-box-admin input {
     width: 100%;
     height: 40px;
     border: 1px solid;
@@ -356,9 +356,8 @@ footer h5{
     font-size: 14px;
     color: black;
     padding: 0 15px;
-    border-radius: 10px;
 }
-.input-box input::placeholder {
+.input-box-admin input::placeholder {
     color: black;
 }
 .wrapper-admin button {
@@ -388,6 +387,18 @@ footer h5{
     background-repeat: no-repeat;
     padding-bottom: 40px;
 }
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: url('../img//bg-ul.png'), #57524e;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
 .banner .tagline {
     font-weight: 0;
     letter-spacing: 0.8px;
@@ -399,15 +410,15 @@ footer h5{
     display: inline-block;
 }
 .banner h1 {
-    font-size: 40px;
+    font-size: 30px;
     color: #EEC19F;
     font-weight: 700;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.2px;
     line-height: 1;
     margin-bottom: 20px;
+    margin-top: 0.5px;
     display: block;
 }
-
 .banner p {
     color: #F1E9D2;
     font-size: 16px;
@@ -423,7 +434,7 @@ footer h5{
     margin-top: 2px;
 }
 .icon-2{
-    font-size: 80px;
+    font-size: 40px;
     color: #eec19f;
 }
 .gambar {
@@ -439,4 +450,173 @@ footer h5{
     100% {
         transform: translateY(-20px);
     }
+}
+
+/* profile */
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    background-size: cover;
+}
+.wrapper-profile{
+    width: 420px;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+.wrapper-profile h1{
+    font-size: 36px;
+}
+.wrapper-profile .input-box-profile{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+.input-box-profile label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #000;
+}
+.input-box-profile input {
+    width: 100%;
+    height: 40px;
+    border: 2px solid;
+    outline: none;
+    border-color: #dfeaf2;
+    font-size: 14px;
+    color: black;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+.input-box-profile input::placeholder {
+    color: black;
+}
+.wrapper-profile button {
+    width: 35%;
+    height: 35px;
+    background: #3c50e0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.wrapper-profile button a{
+    color: #ffffff;
+}
+.wrapper-profile h1 {
+    font-size: 20px;
+    color: #3c50e0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.wrapper-profile h1::before {
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 1px;
+    background-color: rgb(222, 217, 217);
+    top: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wrapper-profile h1::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background-color: #3c50e0;
+    bottom: 0;
+    left: 30%;
+    border-radius: 50px;
+}
+.profile-img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+}
+
+/* navbar admin */
+.gambarnav {
+    display: flex;
+    align-items: center;
+}
+.gambarnav img {
+    max-width: 40px;
+    height: auto;
+    margin-left: 500px;
+    margin-right: 20px;
+}
+.gambarnav span {
+    font-size: 13px;
+}
+.gambarnav span:last-child {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* list museum */
+.list-museum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    background-size: cover;
+}
+.custom-table {
+    width: 90%; 
+    max-width: 800px;
+    margin: 2px auto 3px;
+    font-size: 0.9em;
+}
+
+/* Navbar Beranda */
+.navBeranda {
+    background: url('../img/bg-nav.png'), #201c1a;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+}
+
+/* Navbar Ulasan */
+.navUlasan {
+    background-color: rgba(49, 44, 40, 0.5);
+    transition: background-color 0.2s;
+}
+.navUlasan .navbar-brand,
+.navUlasan .nav-link,
+.navUlasan .form-control,
+.navUlasan .input-group-text{
+    color: white;
+}
+.navUlasan .form-control::placeholder {
+    color: white;
+}
+.navUlasan .masuk-button {
+    background-color: rgba(54, 40, 30, 0.5);
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 4px;
+    transition: background-color 0.6s, border-color 0.3s, color 0.3s;
+}
+.navUlasan .masuk-button:hover {
+    background-color: #35312e;
+    border-color: #ffffff;
+    color: white;
 }

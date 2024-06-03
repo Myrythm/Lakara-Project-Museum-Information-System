@@ -9,11 +9,11 @@ const LoginadminPage = () => {
                     <img src={gambarlogin} alt="gambarlogin" className="gambarlogin" />
                 </div>
                 <form action="">
-                <div className="input-box">
+                <div className="input-box-admin">
                     <label htmlFor="Username">Username</label>
                     <input type="text" id="username" required />
                 </div>
-                <div className="input-box">
+                <div className="input-box-admin">
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" required />
                 </div>
