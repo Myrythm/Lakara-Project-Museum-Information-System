@@ -1,4 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
+import { Link } from 'react-router-dom';
+
 
 const LoginPage = () => {
     return (
@@ -16,9 +18,10 @@ const LoginPage = () => {
                     <a href="/sandi" className="signup-link">Lupa Sandi?</a>
                     <a href="/daftar" className="signup-link">Daftar</a>
                 </div>
-                <button type="submit">
+                <Link to="/beranda"><button type="submit">
                     <a href="">Masuk</a>
-                </button>
+                </button></Link>
+                
                 <div className="line">
                     <span className="text-wrapper">atau</span>
                 </div>
