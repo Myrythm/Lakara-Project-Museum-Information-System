@@ -7,6 +7,7 @@ import HomePage from "./page/HomePage";
 import LoginPage from './page/LoginPage';
 import DaftarPage from './page/DaftarPage';
 import SandiPage from './page/SandiPage';
+import VerifikasiEmail from './page/VerifikasiEmail';
 import BerandaPage from './page/BerandaPage';
 import LoginadminPage from './page/LoginadminPage';
 import UlasanPage from './page/UlasanPage';
@@ -30,6 +31,7 @@ function App() {
         <Route path='/' Component={HomePage} />
         <Route path='/login' Component={LoginPage} />
         <Route path='/daftar' Component={DaftarPage} />
+        <Route path='/verifikasiemail' Component={VerifikasiEmail} />
         <Route path='/sandi' Component={SandiPage} />
         <Route path='/beranda' Component={BerandaPage} />
         <Route path='/loginadmin' Component={LoginadminPage} />

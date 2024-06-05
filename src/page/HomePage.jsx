@@ -10,6 +10,8 @@ import gambar2 from '../dist/img/gambar2/bg2.png'
 import gambar3 from '../dist/img/gambar2/bg3.png'
 import gambar4 from '../dist/img/gambar2/bg4.png'
 import gambar5 from '../dist/img/gambar2/bg5.png'
+import { Link } from 'react-router-dom';
+
 
 const HomePage = () => {
   const mapRef = useRef(null);
@@ -52,12 +54,14 @@ const HomePage = () => {
           </Row>
         </Container>
       </div>
+
+      {/* swiper 5 museum favorit */}
       <div className='museum'>
         <Container className="museum-header">
           <Row>
             <Col>
               <h1>5 Museum Terfavorit</h1>
-              <img src={gambar1} alt="gambar1" />
+              <Link to="/ulasan"><img src={gambar1} alt="gambar1" /></Link>
             </Col>
           </Row>
         </Container>
