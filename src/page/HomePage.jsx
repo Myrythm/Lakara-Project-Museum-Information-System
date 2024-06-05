@@ -7,9 +7,9 @@ import gambarr from '../dist/img/bg-3.png'
 import lakara from '../dist/img/Lakara.png'
 import gambar1 from '../dist/img/gambar2/bg1.png'
 import gambar2 from '../dist/img/gambar2/bg2.png'
-import gambar3 from '../dist/img/gambar2/bg3.png'
+import gambar3 from '../dist/img/gambar/gambar3.png'
 import gambar4 from '../dist/img/gambar2/bg4.png'
-import gambar5 from '../dist/img/gambar2/bg5.png'
+import gambar5 from '../dist/img/gambar/gambar5.png'
 import { Link } from 'react-router-dom';
 
 
@@ -60,8 +60,43 @@ const HomePage = () => {
         <Container className="museum-header">
           <Row>
             <Col>
-              <h1>5 Museum Terfavorit</h1>
-              <Link to="/ulasan"><img src={gambar1} alt="gambar1" /></Link>
+              <h1>5 Museum Terfavorit</h1><Row className="g-4">
+                    
+                </Row>
+                <Row className="row-cols-1 row-cols-md-6 g-4">
+                    <Col>
+                        <div className="image-container">
+                            <img src={gambar1} alt="unsplash.com" className="w-100"/>
+                            <div className="image-text">
+                                <a href="/ulasan">Museum Nasional Republik Indonesia (Gajah), Jakarta Pusat</a>
+                                </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="image-container">
+                            <img src={gambar2} alt="unsplash.com" className="w-100"/>
+                            <div className="image-text">Museum Sejarah Jakarta (Museum Fathahillah), Jakarta Utara</div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="image-container">
+                            <img src={gambar3} alt="unsplash.com" className="w-100"/>
+                            <div className="image-text">Monumen Pancasila Sakti, Jakarta Timur</div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="image-container">
+                            <img src={gambar4} alt="unsplash.com" className="w-100"/>
+                            <div className="image-text">Museum Striamandala, Jakarta Selatan</div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="image-container">
+                            <img src={gambar5} alt="unsplash.com" className="w-100"/>
+                            <div className="image-text">Museum Striamandala, Jakarta Selatan</div>
+                        </div>
+                    </Col>
+                </Row>
             </Col>
           </Row>
         </Container>

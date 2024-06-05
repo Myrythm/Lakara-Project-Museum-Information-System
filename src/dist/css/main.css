@@ -294,6 +294,7 @@ footer h5{
     display: block;
     margin-inline: auto;
     margin-top: 10px;
+    background: url('../img/bg-4.png');
 }
 .museum h1{
     color: #eec19f;
