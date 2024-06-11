@@ -14,6 +14,8 @@ import UlasanPage from './page/UlasanPage';
 import ProfilePage from './page/ProfilePage';
 import NavBerandaComp from './components/NavBerandaComp';
 import NavUlasanComp from './components/NavUlasanComp';
+import Tambah from './page/Tambah';
+import Update from './page/Update';
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
         <Route path='/loginadmin' Component={LoginadminPage} />
         <Route path='/ulasan' Component={UlasanPage} />
         <Route path='/profile' Component={ProfilePage} />
+        <Route path='/admintambah' Component={Tambah} />
+        <Route path='/adminupdate' Component={Update} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

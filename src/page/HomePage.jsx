@@ -28,15 +28,12 @@ const HomePage = () => {
         <Container>
           <Row className="header-box d-flex align-items-center">
             <Col lg="6">
-              <h1 className="mb-4">Selamat Datang</h1>
-              <p className="mb-4">Halo, Penjelajah Budaya! Selamat singgah di LAKARA, 
-                sebuah situs web yang akan membawa Anda menjelajahi 
-                kekayaan museum-museum di seluruh Nusantara. Seperti 
-                namanya, LAKARA (Lintasan Akar Kebudayaan Nusantara) 
-                adalah perahu kecil yang siap mengantarkan Anda 
-                menelusuri khazanah budaya Indonesia yang gemilang. 
-                Di sini, Anda akan menemukan semua museum yang ada di 
-                Nusantara.</p>
+            <h1 className="mb-4">Menyimpan Kenangan, Menghidupkan Sejarah</h1>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
                 <button className="btn btn-lg rounded-1 me-2" onClick={scrollToMap}>JELAJAHI</button>
             </Col>
             <Col lg="6" className="pt-lg-0 pt-5">
