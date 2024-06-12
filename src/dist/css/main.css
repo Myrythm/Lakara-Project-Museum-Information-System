@@ -153,7 +153,7 @@ button a {
 }
 .navbar button {
     width: 35%;
-    height: 30px;
+    height: 38px;
     border-radius: 5px;
     background-color: #000;
     border: 1px solid #fff;
@@ -218,7 +218,7 @@ footer h5{
     background-color: #35312e;
 }
 .homepage .header-box h1{
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 600;
     color: #eec19f;
     border-bottom: 2px solid #eec19f;
@@ -235,7 +235,7 @@ footer h5{
     height: auto;
     display: block;
     margin-inline: auto;
-    margin-top: 40px;
+    margin-top: 150px;
 }
 .homepage .header-box button {
     background-color: #6c645e;
@@ -274,7 +274,7 @@ footer h5{
     padding: 8px 16px;
     font-size: 16px;
     height: auto;
-    margin-left: 259px;
+    margin-left: 350px;
     margin-bottom: 30px;
 }
 .kontak button:hover {
@@ -294,6 +294,7 @@ footer h5{
     display: block;
     margin-inline: auto;
     margin-top: 10px;
+    background: url('../img/bg-4.png');
 }
 .museum h1{
     color: #eec19f;
@@ -308,6 +309,7 @@ footer h5{
     max-height: 500px;
     margin-bottom: 120px;
 }
+
 /* login admin */
 .login-page-admin{
     display: flex;
@@ -619,4 +621,45 @@ footer h5{
     background-color: #35312e;
     border-color: #ffffff;
     color: white;
+}
+
+/* Admin Page */
+.admintambah{
+    background-color: #35312E;
+}
+
+.admintambah h1{
+    color: #EEC19F;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.admintambah button{
+    background-color: #6c645e;
+    border-color: #eec19f;
+    color: rgb(240, 230, 211);
+    padding: 8px 16px;
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.adminupdate{
+    background-color: #35312E;
+}
+
+.adminupdate h1{
+    color: #EEC19F;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.adminupdate button{
+    background-color: #6c645e;
+    border-color: #eec19f;
+    color: rgb(240, 230, 211);
+    padding: 8px 16px;
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 30px;
 }

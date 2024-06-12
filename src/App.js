@@ -7,12 +7,15 @@ import HomePage from "./page/HomePage";
 import LoginPage from './page/LoginPage';
 import DaftarPage from './page/DaftarPage';
 import SandiPage from './page/SandiPage';
+import VerifikasiEmail from './page/VerifikasiEmail';
 import BerandaPage from './page/BerandaPage';
 import LoginadminPage from './page/LoginadminPage';
 import UlasanPage from './page/UlasanPage';
 import ProfilePage from './page/ProfilePage';
 import NavBerandaComp from './components/NavBerandaComp';
 import NavUlasanComp from './components/NavUlasanComp';
+import Tambah from './page/Tambah';
+import Update from './page/Update';
 
 
 function App() {
@@ -30,11 +33,14 @@ function App() {
         <Route path='/' Component={HomePage} />
         <Route path='/login' Component={LoginPage} />
         <Route path='/daftar' Component={DaftarPage} />
+        <Route path='/verifikasiemail' Component={VerifikasiEmail} />
         <Route path='/sandi' Component={SandiPage} />
         <Route path='/beranda' Component={BerandaPage} />
         <Route path='/loginadmin' Component={LoginadminPage} />
         <Route path='/ulasan' Component={UlasanPage} />
         <Route path='/profile' Component={ProfilePage} />
+        <Route path='/admintambah' Component={Tambah} />
+        <Route path='/adminupdate' Component={Update} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>
