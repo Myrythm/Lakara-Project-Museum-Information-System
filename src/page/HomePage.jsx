@@ -3,14 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import gambar from '../dist/img/bg-1.png';
 import peta from '../dist/img/Peta.png';
 import Form from 'react-bootstrap/Form';
-import gambarr from '../dist/img/bg-3.png'
-import lakara from '../dist/img/Lakara.png'
 import gambar1 from '../dist/img/gambar2/bg1.png'
 import gambar2 from '../dist/img/gambar2/bg2.png'
 import gambar3 from '../dist/img/gambar/gambar3.png'
 import gambar4 from '../dist/img/gambar2/bg4.png'
 import gambar5 from '../dist/img/gambar/gambar5.png'
-import { Link } from 'react-router-dom';
 
 
 const HomePage = () => {

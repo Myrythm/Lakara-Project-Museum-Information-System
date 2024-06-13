@@ -16,6 +16,9 @@ import NavBerandaComp from './components/NavBerandaComp';
 import NavUlasanComp from './components/NavUlasanComp';
 import Tambah from './page/Tambah';
 import Update from './page/Update';
+import TabelPage from './page/TabelPage';
+import WilayahPage from './page/WilayahPage';
+import DetailPage from './page/DetailPage';
 
 
 function App() {
@@ -41,6 +44,9 @@ function App() {
         <Route path='/profile' Component={ProfilePage} />
         <Route path='/admintambah' Component={Tambah} />
         <Route path='/adminupdate' Component={Update} />
+        <Route path='/tabel' Component={TabelPage} />
+        <Route path='/wilayah' Component={WilayahPage} />
+        <Route path='/detail' Component={DetailPage} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

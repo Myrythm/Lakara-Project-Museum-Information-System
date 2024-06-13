@@ -439,8 +439,32 @@ footer h5{
     font-size: 40px;
     color: #eec19f;
 }
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow-icon {
+    position: absolute;
+    font-size: 20px;
+    color: #EEC19F;
+    cursor: pointer;
+    z-index: 2;
+}
+.arrow-icon:first-child {
+    left: 90px;
+}
+.arrow-icon:last-child {
+    right: 90px;
+}
 .gambar {
-    border-image: auto;
+    max-width: 65%;
+    height: auto;
+    border: 3px solid #EEC19F;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 @keyframes updown {
     0% {
@@ -452,7 +476,7 @@ footer h5{
     100% {
         transform: translateY(-20px);
     }
-}
+}  
 
 /* profile */
 .profile{
@@ -662,4 +686,109 @@ footer h5{
     font-size: 16px;
     height: auto;
     margin-bottom: 30px;
+}
+
+/* tabel museum */
+.data{
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.table-container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+.button-container {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.icon-box-3 {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+.data-page{
+    background-color: #35312E;
+    min-height: 100vh;
+    padding: 20px;
+}
+.data-page h2{
+    color: #eec19f;
+}
+
+/* Wilayah */
+.wilayah-page{
+    background-color: #35312E;
+    min-height: 100vh;
+    padding: 20px;
+}
+.wilayah-page{
+    color: #eec19f;
+}
+.datawilayah{
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.icon-box-4 {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+/* detail museum */
+.detail-page{
+    background-color: #35312E;
+    min-height: 100vh;
+    padding: 20px;
+}
+.detail-page{
+    color: #eec19f;
+}
+.detail{
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.icon-box-1, .icon-box-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.icon-box-1 {
+    border: 1px solid #007bff;
+    color: #007bff;
+}
+.icon-box-2 {
+    border: 1px solid red;
+    color: red;
+}
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+.img-container {
+    width: 150px;
+    height: auto;
 }
