@@ -12,6 +12,10 @@ import gambar4 from '../dist/img/gambar2/bg4.png'
 import gambar5 from '../dist/img/gambar/gambar5.png'
 import { Link } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap';
+// import gambar1 from "../dist/img/gambar/gambar1.png";
+
 
 const HomePage = () => {
   const mapRef = useRef(null);
@@ -53,51 +57,76 @@ const HomePage = () => {
       </div>
 
       {/* swiper 5 museum favorit */}
-      <div className='museum'>
-        <Container className="museum-header">
-          <Row>
-            <Col>
-              <h1>5 Museum Terfavorit</h1><Row className="g-4">
-                    
-                </Row>
-                <Row className="row-cols-1 row-cols-md-6 g-4">
-                    <Col>
-                        <div className="image-container">
-                            <img src={gambar1} alt="unsplash.com" className="w-100"/>
-                            <div className="image-text">
-                                <a href="/ulasan">Museum Nasional Republik Indonesia (Gajah), Jakarta Pusat</a>
-                                </div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div className="image-container">
-                            <img src={gambar2} alt="unsplash.com" className="w-100"/>
-                            <div className="image-text">Museum Sejarah Jakarta (Museum Fathahillah), Jakarta Utara</div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div className="image-container">
-                            <img src={gambar3} alt="unsplash.com" className="w-100"/>
-                            <div className="image-text">Monumen Pancasila Sakti, Jakarta Timur</div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div className="image-container">
-                            <img src={gambar4} alt="unsplash.com" className="w-100"/>
-                            <div className="image-text">Museum Striamandala, Jakarta Selatan</div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div className="image-container">
-                            <img src={gambar5} alt="unsplash.com" className="w-100"/>
-                            <div className="image-text">Museum Striamandala, Jakarta Selatan</div>
-                        </div>
-                    </Col>
-                </Row>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      
+      <Carousel interval={1000} className='mt-5'>
+        <div>
+          <h1 className='d-flex  justify-content-center align-items-center mb-3'>5 Museum Favorite</h1>
+        </div>
+      <Carousel.Item>
+      <Link to="/ulasan">
+        <div className="d-flex  justify-content-center align-items-center">
+          <img
+            className="img-fluid"
+            src={gambar1}
+            alt="First slide"
+          />
+        </div></Link>
+        <Carousel.Caption>
+          <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Republik Indonesia (Gajah)</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div className="d-flex justify-content-center mt-5 align-items-center">
+          <img
+            className="img-fluid"
+            src={gambar2}
+            alt="Second slide"
+          />
+        </div>
+        <Carousel.Caption>
+        <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Sumatera Utara</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+     
+      <div className="d-flex justify-content-center align-items-center">
+         
+          <img
+            className="img-fluid"
+            src={gambar3}
+            alt="Third slide"
+          />
+         
+        </div> 
+        <Carousel.Caption>
+        <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kalimantan Barat</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div className="d-flex justify-content-center align-items-center">
+          <img
+            className="img-fluid"
+            src={gambar4}
+            alt="Fourth slide"
+          />
+        </div>
+        <Carousel.Caption>
+        <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kota Makassar</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div className="d-flex justify-content-center align-items-center">
+          <img
+            className="img-fluid"
+            src={gambar5}
+            alt="Fifth slide"
+          />
+        </div>
+        <Carousel.Caption>
+          <p style={{ color: 'white', fontWeight:'bold'}}>Museum Negeri Papua</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
       <div id="kontak" className='kontak'>
         <Container>
           <Row>

@@ -17,7 +17,6 @@ import NavUlasanComp from './components/NavUlasanComp';
 import Tambah from './page/Tambah';
 import Update from './page/Update';
 
-
 function App() {
   const location = useLocation();
 
@@ -41,6 +40,7 @@ function App() {
         <Route path='/profile' Component={ProfilePage} />
         <Route path='/admintambah' Component={Tambah} />
         <Route path='/adminupdate' Component={Update} />
+
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>
