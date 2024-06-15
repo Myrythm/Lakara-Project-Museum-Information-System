@@ -23,7 +23,7 @@ const HomePage = () => {
 
   return (
     <div id="homepage" className="homepage">
-      <header className="w-100 min-vh-100">
+      <header className="home-page w-100 min-vh-100">
         <Container>
           <Row className="header-box d-flex align-items-center">
             <Col lg="6">

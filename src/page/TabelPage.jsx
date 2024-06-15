@@ -1,7 +1,7 @@
-import React from 'react'
-import { Table, Button } from 'react-bootstrap'
-import { FaList } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Table, Button } from 'react-bootstrap';
+import { FaList } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const TabelPage = () => {
     const navigate = useNavigate();
@@ -10,11 +10,17 @@ const TabelPage = () => {
         navigate('/wilayah');
     };
 
+    const handleTambahDataClick = () => {
+        navigate('/tambahpulau');
+    };
+
     return (
         <div className="data-page">
             <h2 className="data">Data Museum</h2>
             <div className="button-container">
-                <Button variant="primary" className="mb-3">Tambah Data</Button>
+                <Button variant="primary" className="mb-3" onClick={handleTambahDataClick}>
+                    Tambah Data
+                </Button>
             </div>
             <div className="table-container">
                 <Table responsive="lg" striped bordered hover className="my-table">
@@ -39,7 +45,7 @@ const TabelPage = () => {
                 </Table>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default TabelPage
+export default TabelPage;

@@ -9,12 +9,17 @@ const WilayahPage = () => {
     const handleDetailClick = () => {
         navigate('/detail');
     };
+    const handleTambahDataClick = () => {
+        navigate('/tambahpulau');
+    };
 
     return (
         <div className='wilayah-page'>
             <h2 className="datawilayah">Data Museum</h2>
             <div className="button-container">
-                <Button variant="primary" className="mb-3">Tambah Data</Button>
+                <Button variant="primary" className="mb-3" onClick={handleTambahDataClick}>
+                    Tambah Data
+                </Button>
             </div>
             <div className="table-container">
                 <Table responsive="lg" striped bordered hover className="my-table">

@@ -691,13 +691,11 @@ footer h5{
 .admintambah{
     background-color: #35312E;
 }
-
 .admintambah h1{
     color: #EEC19F;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
 .admintambah button{
     background-color: #6c645e;
     border-color: #eec19f;
@@ -707,17 +705,14 @@ footer h5{
     height: auto;
     margin-bottom: 30px;
 }
-
 .adminupdate{
     background-color: #35312E;
 }
-
 .adminupdate h1{
     color: #EEC19F;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
 .adminupdate button{
     background-color: #6c645e;
     border-color: #eec19f;
@@ -735,13 +730,13 @@ footer h5{
     margin-left: 30px;
 }
 .table-container {
-    max-width: 95%;
+    max-width: 99%;
     margin: 0 auto;
 }
 .button-container {
     display: flex;
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 6px;
 }
 .icon-box-3 {
     width: 40px;
@@ -762,6 +757,7 @@ footer h5{
 }
 .data-page h2{
     color: #eec19f;
+    margin-left: 6px;
 }
 
 /* Wilayah */
@@ -769,6 +765,9 @@ footer h5{
     background-color: #35312E;
     min-height: 100vh;
     padding: 20px;
+}
+.wilayah-page h2{
+    margin-left: 6px;
 }
 .wilayah-page{
     color: #eec19f;
@@ -796,6 +795,9 @@ footer h5{
     background-color: #35312E;
     min-height: 100vh;
     padding: 20px;
+}
+.detail-page h2{
+    margin-left: 6px;
 }
 .detail-page{
     color: #eec19f;
@@ -836,4 +838,50 @@ footer h5{
 /* footer */
 .footer{
     font-family: 'EB Garamond', sans-serif;
+}
+
+/* tambah pulau */
+.tambahpulau{
+    background-color: #35312E;
+    font-family: 'EB Garamond', sans-serif;
+}
+.tambahpulau h1{
+    color: #EEC19F;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.tambahpulau label {
+    color: #EEC19F;
+}
+.tambahpulau button {
+    background-color: #6c645e;
+    border-color: #eec19f;
+    color: rgb(240, 230, 211);
+    padding: 8px 16px;
+    font-size: 16px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* tambah wilayah */
+.tambahwilayah{
+    background-color: #35312E;
+    font-family: 'EB Garamond', sans-serif;
+}
+.tambahwilayah h1{
+    color: #EEC19F;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.tambahwilayah label {
+    color: #EEC19F;
+}
+.tambahwilayah button {
+    background-color: #6c645e;
+    border-color: #eec19f;
+    color: rgb(240, 230, 211);
+    padding: 8px 16px;
+    font-size: 16px;
+    height: auto;
+    margin-top: 20px;
 }

@@ -19,6 +19,8 @@ import Update from './page/Update';
 import TabelPage from './page/TabelPage';
 import WilayahPage from './page/WilayahPage';
 import DetailPage from './page/DetailPage';
+import TampulPage from './page/TampulPage';
+import TamwilPage from './page/TamwilPage';
 
 function App() {
   const location = useLocation();
@@ -46,6 +48,8 @@ function App() {
         <Route path='/tabel' Component={TabelPage} />
         <Route path='/wilayah' Component={WilayahPage} />
         <Route path='/detail' Component={DetailPage} />
+        <Route path='/tambahpulau' Component={TampulPage} />
+        <Route path='/tambahwilayah' Component={TamwilPage} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>
