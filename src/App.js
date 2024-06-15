@@ -23,7 +23,7 @@ import DetailPage from './page/DetailPage';
 function App() {
   const location = useLocation();
 
-  const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/profile'].includes(location.pathname);
+  const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/profile', '/verifikasiemail'].includes(location.pathname);
   const showNavBerandaComp = location.pathname === '/beranda';
   const showNavUlasanComp = location.pathname === '/ulasan';
 
@@ -43,13 +43,9 @@ function App() {
         <Route path='/profile' Component={ProfilePage} />
         <Route path='/admintambah' Component={Tambah} />
         <Route path='/adminupdate' Component={Update} />
-<<<<<<< HEAD
-
-=======
         <Route path='/tabel' Component={TabelPage} />
         <Route path='/wilayah' Component={WilayahPage} />
         <Route path='/detail' Component={DetailPage} />
->>>>>>> f621836273f1880389feb6758f46c99ebead09d2
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

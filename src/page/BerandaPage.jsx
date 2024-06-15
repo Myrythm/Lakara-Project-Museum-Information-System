@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap"
 import { IoIosArrowBack } from "react-icons/io";
-
+import { useNavigate } from 'react-router-dom';
 import gambar1 from '../dist/img/gambar/gambar1.png'
 import gambar2 from '../dist/img/gambar/gambar2.png'
 import gambar3 from '../dist/img/gambar/gambar3.png'
@@ -16,11 +16,17 @@ import gambar12 from '../dist/img/gambar/gambar12.png'
 
 
 const BerandaPage = () => {
+    const navigate = useNavigate();
+
+    const handleBackToHome = () => {
+        navigate('/');
+    };
+
     return (
         <div className='gambar min-vh-100 d-flex align-items-center'>
             <Container>
                 <div className='overlap-2'>
-                    <IoIosArrowBack className='icon-2'/>
+                    <IoIosArrowBack className='icon-2' onClick={handleBackToHome} />
                     <h3>Museum Di Pulau Jawa</h3>
                 </div>
 
@@ -35,7 +41,7 @@ const BerandaPage = () => {
                             <img src={gambar1} alt="unsplash.com" className="w-100"/>
                             <div className="image-text">
                                 <a href="/ulasan">Museum Nasional Republik Indonesia (Gajah), Jakarta Pusat</a>
-                                </div>
+                            </div>
                         </div>
                     </Col>
                     <Col>

@@ -18,7 +18,7 @@ const LoginPage = () => {
                     <a href="/sandi" className="signup-link">Lupa Sandi?</a>
                     <a href="/daftar" className="signup-link">Daftar</a>
                 </div>
-                <Link to="/beranda"><button type="submit">
+                <Link to="/"><button type="submit">
                     <a href="">Masuk</a>
                 </button></Link>
                 

@@ -3,16 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import gambar from '../dist/img/bg-1.png';
 import peta from '../dist/img/Peta.png';
 import Form from 'react-bootstrap/Form';
-import gambar1 from '../dist/img/gambar2/bg1.png'
-import gambar2 from '../dist/img/gambar2/bg2.png'
-import gambar3 from '../dist/img/gambar/gambar3.png'
-import gambar4 from '../dist/img/gambar2/bg4.png'
-import gambar5 from '../dist/img/gambar/gambar5.png'
-
+import gambar1 from '../dist/img/gambar2/bg1.png';
+import gambar2 from '../dist/img/gambar2/bg2.png';
+import gambar3 from '../dist/img/gambar/gambar3.png';
+import gambar4 from '../dist/img/gambar2/bg4.png';
+import gambar5 from '../dist/img/gambar/gambar5.png';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-// import gambar1 from "../dist/img/gambar/gambar1.png";
-
 
 const HomePage = () => {
   const mapRef = useRef(null);
@@ -29,13 +27,8 @@ const HomePage = () => {
         <Container>
           <Row className="header-box d-flex align-items-center">
             <Col lg="6">
-            <h1 className="mb-4">Menyimpan Kenangan, Menghidupkan Sejarah</h1>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-                <button className="btn btn-lg rounded-1 me-2" onClick={scrollToMap}>JELAJAHI</button>
+              <h1 className="mb-4">Menyimpan Kenangan, Menghidupkan Sejarah</h1>
+              <button className="btn btn-lg rounded-1 me-2" onClick={scrollToMap}>JELAJAHI</button>
             </Col>
             <Col lg="6" className="pt-lg-0 pt-5">
               <img src={gambar} alt="bg-1" />
@@ -43,7 +36,7 @@ const HomePage = () => {
           </Row>
         </Container>
       </header>
-      <div className="peta" ref={mapRef}>
+      <div id="map" className="peta" ref={mapRef}>
         <Container>
           <Row>
             <Col>
@@ -54,77 +47,56 @@ const HomePage = () => {
       </div>
 
       {/* swiper 5 museum favorit */}
-      
-      <Carousel interval={1000} className='mt-5'>
-        <div>
-          <h1 className='d-flex  justify-content-center align-items-center mb-3'>5 Museum Favorite</h1>
-        </div>
-      <Carousel.Item>
-      <Link to="/ulasan">
-        <div className="d-flex  justify-content-center align-items-center">
-          <img
-            className="img-fluid"
-            src={gambar1}
-            alt="First slide"
-          />
-        </div></Link>
-        <Carousel.Caption>
-          <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Republik Indonesia (Gajah)</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="d-flex justify-content-center mt-5 align-items-center">
-          <img
-            className="img-fluid"
-            src={gambar2}
-            alt="Second slide"
-          />
-        </div>
-        <Carousel.Caption>
-        <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Sumatera Utara</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-     
-      <div className="d-flex justify-content-center align-items-center">
-         
-          <img
-            className="img-fluid"
-            src={gambar3}
-            alt="Third slide"
-          />
-         
-        </div> 
-        <Carousel.Caption>
-        <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kalimantan Barat</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="d-flex justify-content-center align-items-center">
-          <img
-            className="img-fluid"
-            src={gambar4}
-            alt="Fourth slide"
-          />
-        </div>
-        <Carousel.Caption>
-        <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kota Makassar</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="d-flex justify-content-center align-items-center">
-          <img
-            className="img-fluid"
-            src={gambar5}
-            alt="Fifth slide"
-          />
-        </div>
-        <Carousel.Caption>
-          <p style={{ color: 'white', fontWeight:'bold'}}>Museum Negeri Papua</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-      <div id="kontak" className='kontak'>
+      <div id="favorites" className="swiper mt-5">
+        <Carousel interval={1000}>
+          <div>
+            <h1 className='d-flex justify-content-center align-items-center mb-3'>5 Museum Favorite</h1>
+          </div>
+          <Carousel.Item>
+            <Link to="/ulasan">
+              <div className="d-flex justify-content-center align-items-center">
+                <img className="img-fluid" src={gambar1} alt="First slide" />
+              </div>
+            </Link>
+            <Carousel.Caption>
+              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Republik Indonesia (Gajah)</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="d-flex justify-content-center mt-5 align-items-center">
+              <img className="img-fluid" src={gambar2} alt="Second slide" />
+            </div>
+            <Carousel.Caption>
+              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Sumatera Utara</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="d-flex justify-content-center align-items-center">
+              <img className="img-fluid" src={gambar3} alt="Third slide" />
+            </div>
+            <Carousel.Caption>
+              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kalimantan Barat</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="d-flex justify-content-center align-items-center">
+              <img className="img-fluid" src={gambar4} alt="Fourth slide" />
+            </div>
+            <Carousel.Caption>
+              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kota Makassar</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="d-flex justify-content-center align-items-center">
+              <img className="img-fluid" src={gambar5} alt="Fifth slide" />
+            </div>
+            <Carousel.Caption>
+              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Negeri Papua</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </div>
+      <div id="contact" className='kontak'>
         <Container>
           <Row>
             <Col>

@@ -5,13 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const FooterComp = () => {
   return (
     <FooterContainer>
-      <div className="footer-middle text-center " style={{backgroundClip: '#23201B'}}>
+      <div className="footer footer-middle text-center " style={{backgroundClip: '#23201B'}}>
         <div className="container">
-          <div className="row justify-content-center"> {/* Center the content horizontally */}
+          <div className="row justify-content-center">
             <div className="col-md-auto">
               <h4>TENTANG</h4>
             </div>
-            <div className="col-md-auto"> {/* Use col-md-auto for flexible width */}
+            <div className="col-md-auto">
               <h4>KONTAK</h4>
             </div>
             <div className="col-md-auto">

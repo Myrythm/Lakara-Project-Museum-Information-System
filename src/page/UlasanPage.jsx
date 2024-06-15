@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 import gambar1 from '../dist/img/museum21.png';
 import gambar2 from '../dist/img/museum22.png';
 
 export const UlasanPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [gambar1, gambar2]; // Gabungkan kedua gambar dalam satu array
+  const images = [gambar1, gambar2];
+  const navigate = useNavigate();
 
   const handlePrevious = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : images.length - 1));
@@ -16,15 +18,19 @@ export const UlasanPage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex < images.length - 1 ? prevIndex + 1 : 0));
   };
 
+  const handleBackToHome = () => {
+    navigate('/beranda');
+  };
+
   return (
     <section className="banner" id="ulasan">
       <div className="background-overlay"></div>
       <Container>
-        <Row className="aligh-items-left">
+        <Row className="align-items-left">
           <Col xs={12} md={6} xl={7}>
             <div>
               <div className='overlap-2'>
-                <IoIosArrowBack className='icon-2' />
+                <IoIosArrowBack className='icon-2' onClick={handleBackToHome} />
                 <h1>Museum Nasional Republik Indonesia</h1>
               </div>
               <p style={{ fontSize: '14px' }}>
@@ -36,13 +42,13 @@ export const UlasanPage = () => {
               <h1 className='p-1 fs-5'>Harga Tiket Masuk:</h1>
               <p>Rp 3.000,- / orang</p>
               <h1 className='p-1 fs-5'>Jam Operasional</h1>
-              <p>Selasa–Minggu pukul 09.00–16.00 WIB</p>
+              <p>09.00–16.00 WIB</p>
             </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <div className="image-container">
               <IoIosArrowBack className='arrow-icon' onClick={handlePrevious} />
-              <img src={images[currentImageIndex]} alt={`museum${currentImageIndex + 1}`} className="gambar" />
+              <img src={images[currentImageIndex]} alt={`museum${currentImageIndex + 1}`} className="gambar-ulasan" />
               <IoIosArrowForward className='arrow-icon' onClick={handleNext} />
             </div>
           </Col>
@@ -51,4 +57,5 @@ export const UlasanPage = () => {
     </section>
   );
 }
+
 export default UlasanPage;

@@ -23,7 +23,7 @@ const NavUlasanComp = () => {
                         </InputGroup>
                         <Nav.Link href="#homepage" className='mx-2 text-white'>Beranda</Nav.Link>
                         <Nav.Link href="#homepage" className='mx-2 text-white'>Tentang</Nav.Link>
-                        <Nav.Link href="#kontak" className='mx-2 text-white'>Kontak</Nav.Link>
+                        <Nav.Link href="#contact" className='mx-2 text-white'>Kontak</Nav.Link>
                         <button className="masuk-button"><a href="/login">Masuk</a></button>
                     </Nav>
                     </Navbar.Collapse>
