@@ -21,9 +21,9 @@ const NavBerandaComp = () => {
                             <Form.Control type="search" placeholder="seacrh" className="border-0 bg-transparent text-white me-2" />
                             <InputGroup.Text className="border-0 bg-transparent"><BsSearch className="text-white" /></InputGroup.Text>
                         </InputGroup>
-                        <Nav.Link href="#homepage" className='mx-2 text-white'>Beranda</Nav.Link>
-                        <Nav.Link href="#homepage" className='mx-2 text-white'>Tentang</Nav.Link>
-                        <Nav.Link href="#contact" className='mx-2 text-white'>Kontak</Nav.Link>
+                        <Nav.Link href="/" className='mx-2 text-white'>Beranda</Nav.Link>
+                        <Nav.Link href="/" className='mx-2 text-white'>Tentang</Nav.Link>
+                        <Nav.Link href="/" className='mx-2 text-white'>Kontak</Nav.Link>
                         <button type="submit"><a href="/login">Masuk</a></button>
                     </Nav>
                     </Navbar.Collapse>

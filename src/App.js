@@ -20,13 +20,15 @@ import TabelPage from './page/TabelPage';
 import WilayahPage from './page/WilayahPage';
 import DetailPage from './page/DetailPage';
 import TampulPage from './page/TampulPage';
-import TamwilPage from './page/TamwilPage';
+import MapPage from './page/MapPage';
+import MassagePage from './page/MassagePage';
+import TamkoPage from './page/TamkoPage';
 
 function App() {
   const location = useLocation();
 
   const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/profile', '/verifikasiemail'].includes(location.pathname);
-  const showNavBerandaComp = location.pathname === '/beranda';
+  const showNavBerandaComp = location.pathname === '/beranda' || location.pathname === '/map' || location.pathname === '/massage' || location.pathname === '/detail' || location.pathname === '/wilayah' || location.pathname === '/tambahkota';
   const showNavUlasanComp = location.pathname === '/ulasan';
 
 
@@ -49,7 +51,9 @@ function App() {
         <Route path='/wilayah' Component={WilayahPage} />
         <Route path='/detail' Component={DetailPage} />
         <Route path='/tambahpulau' Component={TampulPage} />
-        <Route path='/tambahwilayah' Component={TamwilPage} />
+        <Route path='/tambahkota' Component={TamkoPage} />
+        <Route path='/map' Component={MapPage} />
+        <Route path='/massage' Component={MassagePage} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

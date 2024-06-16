@@ -1,43 +1,44 @@
 import React from 'react'
 import { Table, Button } from 'react-bootstrap'
-import { FaList } from 'react-icons/fa'
+import { FaTrashAlt } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
-const WilayahPage = () => {
+const MassagePage = () => {
     const navigate = useNavigate();
 
-    const handleDetailClick = () => {
-        navigate('/detail');
-    };
     const handleTambahDataClick = () => {
-        navigate('/tambahkota');
+        navigate('#');
     };
 
     return (
-        <div className='wilayah-page'>
-            <h2 className="datawilayah">Data Museum</h2>
+        <div className='detail-page'>
+            <h2 className="detail">Data Museum</h2>
             <div className="button-container">
                 <Button variant="primary" className="mb-3" onClick={handleTambahDataClick}>
                     Tambah Data
                 </Button>
             </div>
             <div className="table-container">
-                <Table responsive="lg" striped bordered hover className="my-table">
+                <Table responsive striped bordered hover className="my-table">
                     <thead className="table-primary">
                         <tr>
                             <th>No</th>
-                            <th>Nama Kota</th>
-                            <th>Detail</th>
+                            <th>Nama Pengirim</th>
+                            <th>Pesan</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Jawa Barat</td>
-                            <td>
-                                <div className="icon-box-4" onClick={handleDetailClick}>
-                                    <FaList style={{ cursor: 'pointer' }} />
-                                </div>
+                            <td>Musharof Chowdhury</td>
+                            <td>Halo tim pengembang, saya pengguna setia</td>
+                            <td>17 oktober 2024</td>
+                            <td className="icon-container">
+                                <span className="icon-box-2">
+                                    <FaTrashAlt />
+                                </span>
                             </td>
                         </tr>
                     </tbody>
@@ -47,4 +48,4 @@ const WilayahPage = () => {
     )
 }
 
-export default WilayahPage
+export default MassagePage

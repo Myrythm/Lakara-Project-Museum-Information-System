@@ -648,6 +648,7 @@ footer h5{
     background-position: center;
     padding: 10px 0;
     font-family: 'EB Garamond', sans-serif;
+    font-size: 18px;
 }
 .navBeranda input::placeholder {
     color: white;
@@ -658,6 +659,7 @@ footer h5{
     background-color: rgba(49, 44, 40, 0.5);
     transition: background-color 0.2s;
     font-family: 'EB Garamond', sans-serif;
+    font-size: 18px;
 }
 .navUlasan .navbar-brand,
 .navUlasan .nav-link,
@@ -864,19 +866,19 @@ footer h5{
 }
 
 /* tambah wilayah */
-.tambahwilayah{
+.tambahkota{
     background-color: #35312E;
     font-family: 'EB Garamond', sans-serif;
 }
-.tambahwilayah h1{
+.tambahkota h1{
     color: #EEC19F;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.tambahwilayah label {
+.tambahkota label {
     color: #EEC19F;
 }
-.tambahwilayah button {
+.tambahkota button {
     background-color: #6c645e;
     border-color: #eec19f;
     color: rgb(240, 230, 211);
