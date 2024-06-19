@@ -15,20 +15,16 @@ import ProfilePage from './page/ProfilePage';
 import NavBerandaComp from './components/NavBerandaComp';
 import NavUlasanComp from './components/NavUlasanComp';
 import Tambah from './page/Tambah';
-import Update from './page/Update';
-import TabelPage from './page/TabelPage';
-import WilayahPage from './page/WilayahPage';
 import DetailPage from './page/DetailPage';
-import TampulPage from './page/TampulPage';
 import MapPage from './page/MapPage';
 import MassagePage from './page/MassagePage';
-import TamkoPage from './page/TamkoPage';
+import EditdetailPage from './page/EditdetailPage';
 
 function App() {
   const location = useLocation();
 
   const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/profile', '/verifikasiemail'].includes(location.pathname);
-  const showNavBerandaComp = location.pathname === '/beranda' || location.pathname === '/map' || location.pathname === '/massage' || location.pathname === '/detail' || location.pathname === '/wilayah' || location.pathname === '/tambahkota';
+  const showNavBerandaComp = /^\/(beranda|map|massage|detail|wilayah|tambahkota|edit\/\d+|admintambah)$/.test(location.pathname);
   const showNavUlasanComp = location.pathname === '/ulasan';
 
 
@@ -46,14 +42,10 @@ function App() {
         <Route path='/ulasan' Component={UlasanPage} />
         <Route path='/profile' Component={ProfilePage} />
         <Route path='/admintambah' Component={Tambah} />
-        <Route path='/adminupdate' Component={Update} />
-        <Route path='/tabel' Component={TabelPage} />
-        <Route path='/wilayah' Component={WilayahPage} />
         <Route path='/detail' Component={DetailPage} />
-        <Route path='/tambahpulau' Component={TampulPage} />
-        <Route path='/tambahkota' Component={TamkoPage} />
         <Route path='/map' Component={MapPage} />
         <Route path='/massage' Component={MassagePage} />
+        <Route path='/edit/:id' Component={EditdetailPage} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

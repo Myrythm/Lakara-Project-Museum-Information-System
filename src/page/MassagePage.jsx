@@ -1,22 +1,14 @@
+import axios from 'axios'
 import React from 'react'
-import { Table, Button } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 import { FaTrashAlt } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
 
 const MassagePage = () => {
-    const navigate = useNavigate();
-
-    const handleTambahDataClick = () => {
-        navigate('#');
-    };
 
     return (
-        <div className='detail-page'>
-            <h2 className="detail">Data Museum</h2>
+        <div className='massage-page'>
+            <h2 className="massage">Massage</h2>
             <div className="button-container">
-                <Button variant="primary" className="mb-3" onClick={handleTambahDataClick}>
-                    Tambah Data
-                </Button>
             </div>
             <div className="table-container">
                 <Table responsive striped bordered hover className="my-table">

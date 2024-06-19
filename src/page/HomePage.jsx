@@ -11,6 +11,8 @@ import gambar5 from '../dist/img/gambar/gambar5.png';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
+import { MdForwardToInbox } from 'react-icons/md';
+import { FaLocationDot } from "react-icons/fa6";
 
 const HomePage = () => {
   const mapRef = useRef(null);
@@ -32,6 +34,7 @@ const HomePage = () => {
             </Col>
             <Col lg="6" className="pt-lg-0 pt-5">
               <img src={gambar} alt="bg-1" />
+              <MdForwardToInbox size={40} className="icon-inbox" />
             </Col>
           </Row>
         </Container>
@@ -41,6 +44,7 @@ const HomePage = () => {
           <Row>
             <Col>
               <img src={peta} alt="peta" className="peta-image"/>
+              <FaLocationDot size={40} className="icon-inbox-peta" />
             </Col>
           </Row>
         </Container>

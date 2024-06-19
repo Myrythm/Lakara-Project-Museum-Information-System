@@ -266,6 +266,10 @@ footer h5{
     background-color: #35312e;
     border-color: #eec19f;
 }
+.icon-inbox{
+    color: #eec19f;
+    margin-left: 520px;
+}
 .peta{
     background: url('../img/bg.png');
 }
@@ -275,6 +279,11 @@ footer h5{
     display: block;
     margin-inline: auto;
     margin-top: 20px;
+}
+.icon-inbox-peta{
+    color: #EEC19F;
+    margin-left: 1090px;
+    margin-bottom: 20px;
 }
 .kontak h1{
     text-align: center;
@@ -725,73 +734,6 @@ footer h5{
     margin-bottom: 30px;
 }
 
-/* tabel museum */
-.data{
-    margin-top: 20px;
-    font-weight: bold;
-    margin-left: 30px;
-}
-.table-container {
-    max-width: 99%;
-    margin: 0 auto;
-}
-.button-container {
-    display: flex;
-    margin-top: 20px;
-    margin-left: 6px;
-}
-.icon-box-3 {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-}
-.data-page{
-    background-color: #35312E;
-    min-height: 100vh;
-    padding: 20px;
-}
-.data-page h2{
-    color: #eec19f;
-    margin-left: 6px;
-}
-
-/* Wilayah */
-.wilayah-page{
-    background-color: #35312E;
-    min-height: 100vh;
-    padding: 20px;
-}
-.wilayah-page h2{
-    margin-left: 6px;
-}
-.wilayah-page{
-    color: #eec19f;
-}
-.datawilayah{
-    margin-top: 20px;
-    font-weight: bold;
-    margin-left: 30px;
-}
-.icon-box-4 {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-}
-
 /* detail museum */
 .detail-page{
     background-color: #35312E;
@@ -823,14 +765,13 @@ footer h5{
 .icon-box-1 {
     border: 1px solid #007bff;
     color: #007bff;
+    margin-right: 5px;
 }
 .icon-box-2 {
     border: 1px solid red;
     color: red;
-}
-.icon-container {
-    display: flex;
-    align-items: center;
+    margin-right: 5px;
+    margin-top: 7px;
 }
 .img-container {
     width: 150px;
@@ -886,4 +827,43 @@ footer h5{
     font-size: 16px;
     height: auto;
     margin-top: 20px;
+}
+
+/* edit detail */
+
+.page-container{
+    background-color: #35312E;
+}
+.form-container {
+    width: 100%;
+    max-width: 700px; /* Adjust the max width to control the form size */
+    background-color: white;
+    color: #f4be95; /* Ensure the text color inside the form is readable */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* massage */
+.massage-page{
+    background-color: #35312E;
+    min-height: 100vh;
+    padding: 20px;
+}
+.massage-page h2{
+    margin-left: 6px;
+}
+.massage-page{
+    color: #eec19f;
+}
+.massage{
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.massage-page Table{
+    margin-top: 10px;
 }
