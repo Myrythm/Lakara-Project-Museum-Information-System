@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "lakara"
+    database: "lakaramuseum"
 })
 
 app.get('/', (req, res)=> {
@@ -66,6 +66,34 @@ app.delete('/delete/:id', (req, res) => {
         return res.json({ message: 'Data deleted successfully' });
     });
 });
+
+// Api Ulasan
+app.get('/api/museums/:id', (req, res) => {
+    const { id } = req.params;
+    const sql = "SELECT * FROM lakara WHERE id = ?";
+    db.query(sql, [id], (err, data) => {
+        if(err) return res.json(err);
+        return res.json(data[0]);
+    });
+});
+
+// app.get('/api/museums', (req, res)=> {
+//     const sql = "SELECT * FROM lakara";
+//     db.query(sql, (err, data) => {
+//         if(err) return res.json(err);
+        
+//         // Grouping data by province
+//         const groupedData = data.reduce((acc, current) => {
+//             if (!acc[current.provinsi]) {
+//                 acc[current.provinsi] = [];
+//             }
+//             acc[current.provinsi].push(current);
+//             return acc;
+//         }, {});
+
+//         return res.json(groupedData);
+//     });
+// });
 
 app.listen(8084, ()=> {
     console.log('listening..')

@@ -39,7 +39,7 @@ function App() {
         <Route path='/sandi' Component={SandiPage} />
         <Route path='/beranda' Component={BerandaPage} />
         <Route path='/loginadmin' Component={LoginadminPage} />
-        <Route path='/ulasan' Component={UlasanPage} />
+        <Route path='//ulasan/:id' Component={UlasanPage} />
         <Route path='/profile' Component={ProfilePage} />
         <Route path='/admintambah' Component={Tambah} />
         <Route path='/detail' Component={DetailPage} />
