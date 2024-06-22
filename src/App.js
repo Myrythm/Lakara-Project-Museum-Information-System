@@ -25,7 +25,7 @@ function App() {
 
   const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/profile', '/verifikasiemail'].includes(location.pathname);
   const showNavBerandaComp = /^\/(beranda|map|massage|detail|wilayah|tambahkota|edit\/\d+|admintambah)$/.test(location.pathname);
-  const showNavUlasanComp = location.pathname === '/ulasan';
+  const showNavUlasanComp = /^\/ulasan(\/.*)?$/.test(location.pathname);
 
 
   return (
@@ -39,7 +39,7 @@ function App() {
         <Route path='/sandi' Component={SandiPage} />
         <Route path='/beranda' Component={BerandaPage} />
         <Route path='/loginadmin' Component={LoginadminPage} />
-        <Route path='//ulasan/:id' Component={UlasanPage} />
+        <Route path='/ulasan/:id' Component={UlasanPage} />
         <Route path='/profile' Component={ProfilePage} />
         <Route path='/admintambah' Component={Tambah} />
         <Route path='/detail' Component={DetailPage} />

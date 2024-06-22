@@ -21,10 +21,9 @@ const NavUlasanComp = () => {
                             <Form.Control type="search" placeholder="seacrh" className="border-0 bg-transparent text-white me-2" />
                             <InputGroup.Text className="border-0 bg-transparent"><BsSearch className="text-white" /></InputGroup.Text>
                         </InputGroup>
-                        <Nav.Link href="/" className='mx-2 text-white'>Beranda</Nav.Link>
+                        <Nav.Link href="/beranda" className='mx-2 text-white'>Beranda</Nav.Link>
                         <Nav.Link href="/" className='mx-2 text-white'>Tentang</Nav.Link>
                         <Nav.Link href="/" className='mx-2 text-white'>Kontak</Nav.Link>
-                        <button className="masuk-button"><a href="/login">Masuk</a></button>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

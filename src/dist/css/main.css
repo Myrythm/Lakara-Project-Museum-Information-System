@@ -202,7 +202,7 @@ button a {
 .icon-2{
     font-size: 27px;
     color: #eec19f;
-    margin-top: 10px;
+    margin-top: 2px;
 }
 .image-container {
     position: relative;
@@ -344,12 +344,46 @@ footer h5{
     background-position: center;
 }  
 .carousel .img-fluid {
-    width: 40%; /* Menetapkan lebar 100% dari kontainer carousel */
-    height: 40%; /* Atau ukuran tinggi yang diinginkan */
-    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
 }  
 .swiper{
     font-family: 'EB Garamond', sans-serif;
+}
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+.centered-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.museum-name {
+    color: #eec19f;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #35312ee6;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 10px;
 }
 
 /* login admin */
@@ -384,7 +418,6 @@ footer h5{
     width: 100%;
     margin: 20px 0;
 }
-
 .input-box-admin label {
     display: block;
     margin-bottom: 5px;
@@ -661,6 +694,11 @@ footer h5{
 }
 .navBeranda input::placeholder {
     color: white;
+}
+.icon-3{
+    font-size: 27px;
+    color: #eec19f;
+    margin-bottom: 6px;
 }
 
 /* Navbar Ulasan */

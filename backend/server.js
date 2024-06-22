@@ -77,23 +77,13 @@ app.get('/api/museums/:id', (req, res) => {
     });
 });
 
-// app.get('/api/museums', (req, res)=> {
-//     const sql = "SELECT * FROM lakara";
-//     db.query(sql, (err, data) => {
-//         if(err) return res.json(err);
-        
-//         // Grouping data by province
-//         const groupedData = data.reduce((acc, current) => {
-//             if (!acc[current.provinsi]) {
-//                 acc[current.provinsi] = [];
-//             }
-//             acc[current.provinsi].push(current);
-//             return acc;
-//         }, {});
-
-//         return res.json(groupedData);
-//     });
-// });
+app.get('/api/museums/favorites', (req, res) => {
+    const sql = "SELECT * FROM lakara ORDER BY rating DESC LIMIT 5";
+    db.query(sql, (err, data) => {
+        if(err) return res.json(err);
+        return res.json(data);
+    });
+});
 
 app.listen(8084, ()=> {
     console.log('listening..')

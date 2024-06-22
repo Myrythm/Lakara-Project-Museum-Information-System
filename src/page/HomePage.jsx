@@ -1,18 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import gambar from '../dist/img/bg-1.png';
 import peta from '../dist/img/Peta.png';
 import Form from 'react-bootstrap/Form';
-import gambar1 from '../dist/img/gambar2/bg1.png';
-import gambar2 from '../dist/img/gambar2/bg2.png';
-import gambar3 from '../dist/img/gambar/gambar3.png';
-import gambar4 from '../dist/img/gambar2/bg4.png';
-import gambar5 from '../dist/img/gambar/gambar5.png';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { MdForwardToInbox } from 'react-icons/md';
 import { FaLocationDot } from "react-icons/fa6";
+import axios from 'axios';
 
 const HomePage = () => {
   const mapRef = useRef(null);
@@ -22,6 +18,18 @@ const HomePage = () => {
       mapRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const [topMuseums, setTopMuseums] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8084/')
+            .then(res => {
+                // rating 5 museum
+                const sortedData = res.data.sort((a, b) => b.rating - a.rating).slice(0, 5);
+                setTopMuseums(sortedData);
+            })
+            .catch(err => console.log(err));
+    }, []);
 
   return (
     <div id="homepage" className="homepage">
@@ -44,7 +52,9 @@ const HomePage = () => {
           <Row>
             <Col>
               <img src={peta} alt="peta" className="peta-image"/>
-              <FaLocationDot size={40} className="icon-inbox-peta" />
+              <Link to="/map">
+                <FaLocationDot size={40} className="icon-inbox-peta" />
+              </Link>
             </Col>
           </Row>
         </Container>
@@ -52,54 +62,28 @@ const HomePage = () => {
 
       {/* swiper 5 museum favorit */}
       <div id="favorites" className="swiper mt-5">
-        <Carousel interval={1000}>
-          <div>
-            <h1 className='d-flex justify-content-center align-items-center mb-3'>5 Museum Favorite</h1>
-          </div>
-          <Carousel.Item>
-            <Link to="/ulasan">
-              <div className="d-flex justify-content-center align-items-center">
-                <img className="img-fluid" src={gambar1} alt="First slide" />
-              </div>
-            </Link>
-            <Carousel.Caption>
-              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Republik Indonesia (Gajah)</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="d-flex justify-content-center mt-5 align-items-center">
-              <img className="img-fluid" src={gambar2} alt="Second slide" />
-            </div>
-            <Carousel.Caption>
-              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Nasional Sumatera Utara</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="d-flex justify-content-center align-items-center">
-              <img className="img-fluid" src={gambar3} alt="Third slide" />
-            </div>
-            <Carousel.Caption>
-              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kalimantan Barat</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="d-flex justify-content-center align-items-center">
-              <img className="img-fluid" src={gambar4} alt="Fourth slide" />
-            </div>
-            <Carousel.Caption>
-              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Kota Makassar</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="d-flex justify-content-center align-items-center">
-              <img className="img-fluid" src={gambar5} alt="Fifth slide" />
-            </div>
-            <Carousel.Caption>
-              <p style={{ color: 'white', fontWeight:'bold'}}>Museum Negeri Papua</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </div>
+            <Carousel interval={1000}>
+                <div>
+                    <h1 className='d-flex justify-content-center align-items-center mb-3'>5 Museum Favorite</h1>
+                </div>
+                {topMuseums.map((museum, index) => (
+                    <Carousel.Item key={index}>
+                        <div className="carousel-content">
+                            <div className="image-container">
+                                <img className="img-fluid" src={museum.gambar1} alt={`Slide ${index + 1}`} />
+                            </div>
+                            <Carousel.Caption>
+                                <Link to={`/ulasan/${museum.id}`}>
+                                    <p className="museum-name">
+                                        {museum.nama}
+                                    </p>
+                                </Link>
+                            </Carousel.Caption>
+                        </div>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </div>
       <div id="contact" className='kontak'>
         <Container>
           <Row>
