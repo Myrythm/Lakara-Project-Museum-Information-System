@@ -1,5 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import "./dist/css/main.css"
+import "./dist/css/main.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './components/NavbarComp';
 import FooterComp from './components/FooterComp';
@@ -22,30 +23,45 @@ import EditdetailPage from './page/EditdetailPage';
 
 function App() {
   const location = useLocation();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const loggedInStatus = localStorage.getItem('isLoggedIn') === 'true';
+    setIsLoggedIn(loggedInStatus);
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem('isLoggedIn', 'true');
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('isLoggedIn');
+  };
 
   const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/profile', '/verifikasiemail'].includes(location.pathname);
   const showNavBerandaComp = /^\/(beranda|map|massage|detail|wilayah|tambahkota|edit\/\d+|admintambah)$/.test(location.pathname);
   const showNavUlasanComp = /^\/ulasan(\/.*)?$/.test(location.pathname);
 
-
   return (
     <div>
-      {showNavBerandaComp ? <NavBerandaComp /> : showNavUlasanComp ? <NavUlasanComp /> : !hideNavbarAndFooter && <NavbarComp />}
+      {showNavBerandaComp ? <NavBerandaComp /> : showNavUlasanComp ? <NavUlasanComp /> : !hideNavbarAndFooter && <NavbarComp isLoggedIn={isLoggedIn} />}
       <Routes>
-        <Route path='/' Component={HomePage} />
-        <Route path='/login' Component={LoginPage} />
-        <Route path='/daftar' Component={DaftarPage} />
-        <Route path='/verifikasiemail' Component={VerifikasiEmail} />
-        <Route path='/sandi' Component={SandiPage} />
-        <Route path='/beranda' Component={BerandaPage} />
-        <Route path='/loginadmin' Component={LoginadminPage} />
-        <Route path='/ulasan/:id' Component={UlasanPage} />
-        <Route path='/profile' Component={ProfilePage} />
-        <Route path='/admintambah' Component={Tambah} />
-        <Route path='/detail' Component={DetailPage} />
-        <Route path='/map' Component={MapPage} />
-        <Route path='/massage' Component={MassagePage} />
-        <Route path='/edit/:id' Component={EditdetailPage} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/login' element={<LoginPage onLogin={handleLogin} />} />
+        <Route path='/daftar' element={<DaftarPage />} />
+        <Route path='/verifikasiemail' element={<VerifikasiEmail />} />
+        <Route path='/sandi' element={<SandiPage />} />
+        <Route path='/beranda' element={<BerandaPage />} />
+        <Route path='/loginadmin' element={<LoginadminPage />} />
+        <Route path='/ulasan/:id' element={<UlasanPage />} />
+        <Route path='/profile' element={<ProfilePage />} />
+        <Route path='/admintambah' element={<Tambah />} />
+        <Route path='/detail' element={<DetailPage />} />
+        <Route path='/map' element={<MapPage />} />
+        <Route path='/massage' element={<MassagePage />} />
+        <Route path='/edit/:id' element={<EditdetailPage />} />
       </Routes>
       {!hideNavbarAndFooter && <FooterComp />}
     </div>

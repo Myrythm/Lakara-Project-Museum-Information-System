@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, InputGroup, Form } from "react-bootstrap"
 import { BsSearch } from "react-icons/bs";
 import logo from '../dist/img/logo.png'
 
-const NavbarComp = ({isLoggedIn}) => {
+const NavbarComp = ({ isLoggedIn }) => {
     return (
         <div className='sticky-top'>    
             <Navbar expand="lg" className="nav">

@@ -69,7 +69,7 @@ const HomePage = () => {
                 {topMuseums.map((museum, index) => (
                     <Carousel.Item key={index}>
                         <div className="carousel-content">
-                            <div className="image-container">
+                            <div className="image-container2">
                                 <img className="img-fluid" src={museum.gambar1} alt={`Slide ${index + 1}`} />
                             </div>
                             <Carousel.Caption>

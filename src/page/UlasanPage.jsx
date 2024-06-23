@@ -53,7 +53,7 @@ export const UlasanPage = () => {
                         </div>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <div className="image-container">
+                        <div className="image-containerr">
                             <IoIosArrowBack className='arrow-icon' onClick={handlePrevious} />
                             <img src={museumData[`gambar${currentImageIndex + 1}`]} alt={`museum${currentImageIndex + 1}`} className="gambar-ulasan" />
                             <IoIosArrowForward className='arrow-icon' onClick={handleNext} />
