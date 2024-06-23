@@ -13,6 +13,53 @@ const db = mysql.createConnection({
     database: "lakaramuseum"
 })
 
+// api login
+
+db.connect(err => {
+    if (err) throw err;
+    console.log('Connected to database');
+});
+
+app.post('/api/login', (req, res) => {
+    const { email, password } = req.body;
+    db.query('SELECT * FROM login WHERE email = ?', [email], (err, results) => {
+        if (err) throw err;
+        if (results.length > 0) {
+            const user = results[0];
+            if (password === user.password) {
+                res.json({ success: true, message: 'Login successful' });
+            } else {
+                res.json({ success: false, message: 'Incorrect password' });
+            }
+        } else {
+            res.json({ success: false, message: 'User not found' });
+        }
+    });
+});
+
+
+// api daftar
+
+app.post('/api/register', (req, res) => {
+    const { username, email, password } = req.body;
+
+    // Periksa apakah email sudah terdaftar
+    db.query('SELECT email FROM login WHERE email = ?', [email], (err, results) => {
+        if (err) throw err;
+        if (results.length > 0) {
+            return res.json({ success: false, message: 'Email sudah terdaftar' });
+        }
+
+        // Simpan pengguna baru ke database
+        const newUser = { username, email, password };
+        db.query('INSERT INTO login SET ?', newUser, (err, results) => {
+            if (err) throw err;
+            res.json({ success: true, message: 'Registrasi berhasil' });
+        });
+    });
+});
+
+// api museum
 app.get('/', (req, res)=> {
     const sql = "SELECT * FROM lakara";
     db.query(sql, (err, data) => {
