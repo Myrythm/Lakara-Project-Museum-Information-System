@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import profileimg from '../dist/img/profile.png';
 
-const ProfilePage = () => {
+const ProfileadminPage = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
 
@@ -55,7 +55,7 @@ const ProfilePage = () => {
                 </form>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default ProfilePage;
+export default ProfileadminPage

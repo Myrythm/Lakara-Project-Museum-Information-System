@@ -27,10 +27,30 @@ app.post('/api/login', (req, res) => {
         if (results.length > 0) {
             const user = results[0];
             if (password === user.password) {
-                res.json({ success: true, message: 'Login successful' });
+                // Setelah berhasil login, sesuaikan respons berdasarkan role
+                if (user.role === 'admin') {
+                    res.json({ success: true, role: 'admin', message: 'Login successful' });
+                } else {
+                    res.json({ success: true, role: 'user', message: 'Login successful' });
+                }
             } else {
                 res.json({ success: false, message: 'Incorrect password' });
             }
+        } else {
+            res.json({ success: false, message: 'User not found' });
+        }
+    });
+});
+
+
+
+//profile
+app.post('/api/profile', (req, res) => {
+    const { email } = req.body;
+    db.query('SELECT username, email FROM login WHERE email = ?', [email], (err, results) => {
+        if (err) throw err;
+        if (results.length > 0) {
+            res.json({ success: true, user: results[0] });
         } else {
             res.json({ success: false, message: 'User not found' });
         }

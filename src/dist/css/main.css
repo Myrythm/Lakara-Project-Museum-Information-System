@@ -570,24 +570,24 @@ footer h5{
 }  
 
 /* profile */
-.profile{
+.profile {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4f6f9;
+    background-image: url('../img/bg.png');
     background-size: cover;
 }
-.wrapper-profile{
+.wrapper-profile {
     width: 420px;
     background: #ffffff;
     padding: 30px 40px;
     border-radius: 10px;
 }
-.wrapper-profile h1{
+.wrapper-profile h1 {
     font-size: 36px;
 }
-.wrapper-profile .input-box-profile{
+.wrapper-profile .input-box-profile {
     position: relative;
     width: 100%;
     margin: 20px 0;
@@ -620,11 +620,11 @@ footer h5{
     outline: none;
     font-size: 16px;
     margin: 0 auto;
-    display: block; 
+    display: block;
     margin-top: 30px;
     margin-bottom: 10px;
 }
-.wrapper-profile button a{
+.wrapper-profile button a {
     color: #ffffff;
 }
 .wrapper-profile h1 {
@@ -638,7 +638,7 @@ footer h5{
 .wrapper-profile h1::before {
     content: '';
     position: absolute;
-    width: 100%; 
+    width: 100%;
     height: 1px;
     background-color: rgb(222, 217, 217);
     top: 33px;
@@ -656,12 +656,30 @@ footer h5{
     border-radius: 50px;
 }
 .profile-img {
-    display: block;
-    margin: 0 auto;
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+.profile-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
+
 /* navbar admin */
+.navadmin {
+    background: url('../img/bg-nav.png'), #201c1a;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 18px;
+}
+.navadmin input::placeholder {
+    color: white;
+}
 .gambarnav {
     display: flex;
     align-items: center;

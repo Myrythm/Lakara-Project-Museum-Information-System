@@ -13,9 +13,17 @@ const LoginPage = ({ onLogin }) => {
         axios.post('http://localhost:8084/api/login', { email, password })
             .then(response => {
                 console.log(response.data);
-                if(response.data.success) {
-                    onLogin();
-                    navigate('/');
+                if (response.data.success) {
+                    localStorage.setItem('email', email);  // Store email in localStorage
+                    localStorage.setItem('role', response.data.role);  // Store role in localStorage
+                    
+                    if (response.data.role === 'admin') {
+                        navigate('/detail');  // Redirect admin to detail page
+                    } else {
+                        navigate('/');  // Redirect user to home page or any appropriate page
+                    }
+                    
+                    onLogin(email);
                 } else {
                     alert('Login failed: ' + response.data.message);
                 }
@@ -24,6 +32,7 @@ const LoginPage = ({ onLogin }) => {
                 console.error(error);
             });
     };
+    
 
     return (
         <div className="login-page">

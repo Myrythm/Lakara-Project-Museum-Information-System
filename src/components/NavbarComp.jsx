@@ -1,9 +1,9 @@
-import React from 'react'
-import { Navbar, Nav, Container, InputGroup, Form } from "react-bootstrap"
+import React from 'react';
+import { Navbar, Nav, Container, InputGroup, Form } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
-import logo from '../dist/img/logo.png'
+import logo from '../dist/img/logo.png';
 
-const NavbarComp = ({ isLoggedIn }) => {
+const NavbarComp = ({ isLoggedIn, handleLogout }) => {
     return (
         <div className='sticky-top'>    
             <Navbar expand="lg" className="nav">
@@ -25,13 +25,24 @@ const NavbarComp = ({ isLoggedIn }) => {
                             <Nav.Link href="/beranda" className='mx-2 text-white'>Beranda</Nav.Link>
                             <Nav.Link href="#homepage" className='mx-2 text-white'>Tentang</Nav.Link>
                             <Nav.Link href="#contact" className='mx-2 text-white'>Kontak</Nav.Link>
-                            {!isLoggedIn && <button type="submit"><a href="/login">Masuk</a></button>}
+                            {!isLoggedIn ? (
+                                <button type="submit" className="btn btn-primary">
+                                    <a href="/login" className="text-white">Masuk</a>
+                                </button>
+                            ) : (
+                                <>
+                                    <Nav.Link href="/profile" className='mx-2 text-white'>Profil</Nav.Link>
+                                    <button type="submit" className="btn btn-primary" onClick={handleLogout}>
+                                        Logout
+                                    </button>
+                                </>
+                            )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>
-    )
+    );
 }
 
-export default NavbarComp
+export default NavbarComp;
