@@ -23,6 +23,7 @@ import EditdetailPage from './page/EditdetailPage';
 import NavadminComp from './components/NavadminComp';
 import ProfileadminPage from './page/ProfileadminPage';
 import ChatbotPage from './page/ChatbotPage';
+import DashboardPage from './page/DashboardPage';
 
 function App() {
     const location = useLocation();
@@ -81,6 +82,7 @@ function App() {
                 <Route path='/edit/:id' element={<EditdetailPage />} />
                 <Route path='/profileadmin' element={<ProfileadminPage />} />
                 <Route path='/chatbot' element={<ChatbotPage />} />
+                <Route path='/dashboardpage' element={<DashboardPage />} />
             </Routes>
             {!hideNavbarAndFooter && <FooterComp />}
         </div>
