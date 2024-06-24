@@ -24,7 +24,6 @@ const NavadminComp = ({ isLoggedIn, handleLogout }) => {
                             </InputGroup>
                             <Nav.Link href="#" className='mx-2 text-white'>Dashboard</Nav.Link>
                             <Nav.Link href="/detail" className='mx-2 text-white'>Detail</Nav.Link>
-                            <Nav.Link href="#" className='mx-2 text-white'>Massage</Nav.Link>
                             {isLoggedIn && (
                                 <>
                                     <Nav.Link href="/profileadmin" className='mx-2 text-white'>Profile</Nav.Link>
