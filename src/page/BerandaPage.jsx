@@ -27,7 +27,7 @@ const BerandaPage = () => {
             <Container>
                 <div className='overlap-2'>
                     <IoIosArrowBack className='icon-3' onClick={handleBackToHome} />
-                <h3>Museum Di Pulau Jawa</h3>
+                <h3>Data Museum</h3>
             </div>
 
                 {/* <Row className="g-4">
