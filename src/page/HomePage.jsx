@@ -41,8 +41,10 @@ const HomePage = () => {
               <button className="btn btn-lg rounded-1 me-2" onClick={scrollToMap}>JELAJAHI</button>
             </Col>
             <Col lg="6" className="pt-lg-0 pt-5">
-              <img src={gambar} alt="bg-1" />
-              <MdForwardToInbox size={40} className="icon-inbox" />
+              <Link to="/chatbot">
+                  <img src={gambar} alt="bg-1" />
+                  <MdForwardToInbox size={40} className="icon-inbox" />
+              </Link>
             </Col>
           </Row>
         </Container>

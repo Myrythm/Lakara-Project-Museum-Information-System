@@ -22,6 +22,7 @@ import MassagePage from './page/MassagePage';
 import EditdetailPage from './page/EditdetailPage';
 import NavadminComp from './components/NavadminComp';
 import ProfileadminPage from './page/ProfileadminPage';
+import ChatbotPage from './page/ChatbotPage';
 
 function App() {
     const location = useLocation();
@@ -53,7 +54,7 @@ function App() {
     };
 
     const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/verifikasiemail'].includes(location.pathname);
-    const showNavBerandaComp = /^\/(beranda|map|massage|wilayah|tambahkota|edit\/\d+|admintambah|profile)$/.test(location.pathname);
+    const showNavBerandaComp = /^\/(beranda|map|massage|wilayah|tambahkota|edit\/\d+|admintambah|profile|chatbot)$/.test(location.pathname);
     const showNavUlasanComp = /^\/ulasan(\/.*)?$/.test(location.pathname);
     const showNavadminComp = /^\/(detail|profileadmin)(\/.*)?$/.test(location.pathname);
 
@@ -79,6 +80,7 @@ function App() {
                 <Route path='/massage' element={<MassagePage />} />
                 <Route path='/edit/:id' element={<EditdetailPage />} />
                 <Route path='/profileadmin' element={<ProfileadminPage />} />
+                <Route path='/chatbot' element={<ChatbotPage />} />
             </Routes>
             {!hideNavbarAndFooter && <FooterComp />}
         </div>

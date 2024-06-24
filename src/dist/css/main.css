@@ -966,3 +966,71 @@ footer h5{
     text-align: center;
     padding: 10px;
 }
+
+/* chatbot */
+.chat {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbot {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #35312E;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'EB Garamond', sans-serif;
+}
+.chatbot h1 {
+    text-align: center;
+    color: #eec19f;
+}
+.chatbot .form-chatbot {
+    margin-bottom: 20px;
+}
+.chatbot label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #eec19f;
+}
+.chatbot textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.chatbot button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.chatbot button:hover {
+    background-color: #0056b3;
+}
+.chatbot .response-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    overflow-y: auto;
+}
+.chatbot .response-container p {
+    margin: 10px 0;
+}
