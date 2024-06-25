@@ -22,7 +22,7 @@ const NavadminComp = ({ isLoggedIn, handleLogout }) => {
                                 <Form.Control type="search" placeholder="search" className="border-0 bg-transparent text-white me-2" />
                                 <InputGroup.Text className="border-0 bg-transparent"><BsSearch className="text-white" /></InputGroup.Text>
                             </InputGroup>
-                            <Nav.Link href="#" className='mx-2 text-white'>Dashboard</Nav.Link>
+                            <Nav.Link href="/dashboardpage" className='mx-2 text-white'>Dashboard</Nav.Link>
                             <Nav.Link href="/detail" className='mx-2 text-white'>Detail</Nav.Link>
                             {isLoggedIn && (
                                 <>

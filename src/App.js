@@ -57,7 +57,7 @@ function App() {
     const hideNavbarAndFooter = ['/login', '/daftar', '/sandi', '/loginadmin', '/verifikasiemail'].includes(location.pathname);
     const showNavBerandaComp = /^\/(beranda|map|massage|wilayah|tambahkota|edit\/\d+|admintambah|profile|chatbot)$/.test(location.pathname);
     const showNavUlasanComp = /^\/ulasan(\/.*)?$/.test(location.pathname);
-    const showNavadminComp = /^\/(detail|profileadmin)(\/.*)?$/.test(location.pathname);
+    const showNavadminComp = /^\/(dashboardpage|detail|profileadmin)(\/.*)?$/.test(location.pathname);
 
     return (
         <div>
