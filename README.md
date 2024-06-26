@@ -1,3 +1,27 @@
+# LAKARA: Museum Information System
+
+Lakara is an information system that provides comprehensive details about all the museums in Indonesia. Equipped with a sentiment analysis chatbot, it analyzes visitor feedback and generates visualizations on the admin page. On the admin page, administrators can add new museums along with their information.
+
+## Features
+
+- **Museum Information**: Provides comprehensive details about all the museums in Indonesia.
+- **Sentiment Analysis**: Utilizes a BERT-based model to classify text into positive, negative, or neutral sentiments.
+- **Customized Chatbot Responses**: Adjusts responses based on detected sentiment to enhance user engagement.
+- **Sentiment Data Storage**: Stores sentiment data in a database for analysis.
+- **Admin Page**:
+  - Analyze visitor interactions and sentiment trends through visualizations.
+  - Add new museums along with their information.
+
+## Prerequisites
+
+- React JS
+- Express JS
+- Python 3.x
+- Flask
+- Flask-CORS
+- requests
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,32 +63,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
