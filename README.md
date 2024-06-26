@@ -1,4 +1,4 @@
-_# LAKARA: Museum Information System
+# LAKARA: Museum Information System
 
 Lakara is an information system that provides comprehensive details about all the museums in Indonesia. Equipped with a sentiment analysis chatbot, it analyzes visitor feedback and generates visualizations on the admin page. On the admin page, administrators can add new museums along with their information.
 
